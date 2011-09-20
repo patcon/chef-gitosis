@@ -53,3 +53,7 @@ end
 bash "Initialize gitosis" do
   code "sudo -H -u git gitosis-init < /tmp/id_rsa.pub"
 end
+
+file "/home/git/repositories/gitosis-admin.git/hooks/post-update" do
+  mode "0755"
+end
